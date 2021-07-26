@@ -1,0 +1,85 @@
+{
+    "orgs": [
+        {
+            "id": "org-abcd",
+            "groups": [
+                "grp-01"
+            ],
+            "users": [
+                "usr-18253"
+            ]
+        },
+        {
+            "id": "org-abc",
+            "groups": [
+                "grp-011"
+            ],
+            "users": [
+                "usr-182537"
+            ]
+        }
+    ],
+    "groups": [
+        {
+            "id": "grp-01",
+            "users": [
+                "usr-182538"
+            ]
+        }
+    ],
+    "users": [],
+    "permissions": [
+        {
+            "name": "add"
+        },
+        {
+            "name": "read"
+        },
+        {
+            "name": "edit"
+        },
+        {
+            "name": "remove"
+        }
+    ],
+    "roles": [
+        {
+            "name": "user.all",
+            "permissions": [
+                "permissions/add",
+                "permissions/read",
+                "permissions/edit",
+                "permissions/remove"
+            ]
+        },
+        {
+            "name": "user.edit",
+            "permissions": [
+                "permissions/read",
+                "permissions/edit"
+            ]
+        },
+        {
+            "name": "user.read",
+            "permissions": [
+                "permissions/read"
+            ]
+        }
+    ],
+    "bindings": [
+        {
+            "role": "roles/user.read",
+            "members": [
+                "users/usr-18253",
+                "groups/grp-01",
+                "orgs/org-abc"
+            ]
+        },
+        {
+            "role": "roles/user.edit",
+            "members": [
+                "users/usr-18253"
+            ]
+        }
+    ]
+}
